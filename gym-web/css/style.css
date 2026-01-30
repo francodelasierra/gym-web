@@ -1,6 +1,24 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: gainsboro;
+}
+
+.titulos {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+p {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav-header {
@@ -9,29 +27,77 @@ body {
     align-items: center;
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 30px;
     height: 100px;
+}
+
+header nav ul li a {
+    text-decoration: none !important;
+    color: #fff;
+    font-size: 20px;
 }
 
 .presentacion {
     display: block;
-    justify-content:center;
+    justify-content:center !important;
     align-items: center;
+    margin: 20px;
+}
+
+.subtitulos {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .Productos-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 50px;
+    padding: 20px;
 }
 
 .productos-items {
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 10px;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin: 10px;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.imagen-producto {
+    width: 75%;
+    height: 200px;
+    object-fit: cover;
+    transition: 1s;
+    margin: 45px;
+
+}
+
+.imagen-producto:hover {
+    transform: scale(1.1);
+}
+
+.nombre-producto {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.agregar-carrito {
+    margin:20px;
+    padding: 15px;
+    background-color: crimson;
+    border-radius: 10px;
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
 }
 
 #contactos {
@@ -41,4 +107,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.info-redes a {
+    text-decoration: none !important;
+    color: #fff;
+}
+
+a:hover {
+    color:aqua;
 }

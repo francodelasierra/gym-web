@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
         <nav class="nav-header">
-            <h1>Power Gym</h1>
-            <ul>
-                <li>
-                    <a href="">Planes</a>
-                </li>
-                <li>
-                    <a href="#planes">Productos</a>
-                </li>
-                <li>
-                    <a href="">Carrito</a>
-                </li>
-                <li>
-                    <a href="#contactos">Contactos</a>
-                </li>
-            </ul>
+            <img src="./assets/img/logo-powergym.png" alt="" width="15%">
+            <div class="nav-list">
+                <ul>
+                    <li>
+                        <a href="">Planes</a>
+                    </li>
+                    <li>
+                        <a href="#planes">Productos</a>
+                    </li>
+                    <li>
+                        <a href="">Carrito</a>
+                    </li>
+                    <li>
+                        <a href="#contactos">Contactos</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <div class="presentacion">
-            <h2>Quienes somos</h2>
+            <h2 class="titulos">Bienvenidos a Power Gym</h2>
             <p>
-                Somos un gimnasio dedicado a mejorar la salud y bienestar de nuestros clientes.
+                En Power Gym creemos que el entrenamiento es mucho más que una rutina: es una filosofía de vida. Nuestro
+                gimnasio nació con una visión clara: crear un espacio donde la disciplina, la constancia y la superación
+                personal se transformen en resultados reales y sostenibles. Desde nuestros inicios, trabajamos con un
+                solo objetivo estratégico: potenciar el rendimiento físico y mental de cada uno de nuestros socios.
+
+                A lo largo del tiempo, Power Gym se consolidó como un referente en entrenamiento integral, combinando
+                equipamiento de alto nivel, un entorno profesional y una comunidad enfocada en el progreso continuo.
+                Cada decisión que tomamos está orientada a maximizar la experiencia del cliente y elevar los estándares
+                del sector fitness.
+            </p>
+
+            <h3 class="subtitulos">Suplementación que potencia resultados</h3>
+
+            <p>Entendemos que el entrenamiento eficiente va de la mano de una nutrición inteligente. Por eso, contamos
+                con un servicio especializado de venta de suplementos, cuidadosamente seleccionado para acompañar cada
+                objetivo: aumento de masa muscular, definición, recuperación y mejora del rendimiento. Trabajamos con
+                marcas líderes y asesoramiento personalizado, asegurando calidad, seguridad y resultados medibles.
+
+                Nuestro enfoque no es vender productos, sino ofrecer soluciones que complementen el esfuerzo diario de
+                nuestros clientes dentro y fuera del gimnasio.
+            </p>
+
+            <h3 class="subtitulos">Planes mensuales pensados para tu crecimiento</h3>
+
+            <p>En Power Gym diseñamos planes mensuales flexibles y competitivos, adaptados a distintos niveles y
+                objetivos. Creemos en el compromiso progresivo, sin barreras innecesarias, y con una excelente relación
+                costo/beneficio. Nuestros planes están pensados para acompañarte en cada etapa de tu evolución,
+                brindándote acceso completo a nuestras instalaciones, servicios y beneficios exclusivos.
+
+                Invertir en tu salud es una decisión estratégica, y en Power Gym te damos el entorno, las herramientas y
+                el respaldo para que esa inversión rinda al máximo.
             </p>
         </div>
     </main>
     <aside>
         <p>carrusel de bootstrap</p>
 
-        <h2 id="planes">Planes</h2>
+        <h2 class="titulos" id="planes">Planes</h2>
         <section class="cards-container">
             <div id="cards-plan1">
 
@@ -52,37 +92,37 @@
 
         <p>carrusel de bootstrap</p>
 
-        <h2 id="productos">Productos</h2>
+        <h2 class="titulos" id="productos">Productos</h2>
         <section class="Productos-container" id="productos-cart">
             <div class="productos-items">
-                <img src="./assets/img/proteina-1.webp" alt="" width="30%">
-                <h3>Nombre del producto</h3>
-                <small>Descripcion del producto</small>
-                <p>Precio del producto</p>
-                <button>Agregar al carrito</button>
+                <img class="imagen-producto" src="./assets/img/proteina-1.webp" alt="" width="30%">
+                <h3 class="nombre-producto">Nombre del producto</h3>
+                <p>Descripcion del producto</p>
+                <small>Precio del producto</small>
+                <button class="agregar-carrito">Agregar al carrito</button>
             </div>
             <div class="productos-items">
-                <img src="./assets/img/mutant-mass-1.png" alt="" width="30%">
-                <h3>Nombre del producto</h3>
-                <small>Descripcion del producto</small>
-                <p>Precio del producto</p>
-                <button>Agregar al carrito</button>
+                <img class="imagen-producto" src="./assets/img/mutant-mass-1.png" alt="" width="30%">
+                <h3 class="nombre-producto">Nombre del producto</h3>
+                <p>Descripcion del producto</p>
+                <small>Precio del producto</small>
+                <button class="agregar-carrito">Agregar al carrito</button>
             </div>
             <div class="productos-items">
-                <img src="./assets/img/creatina-1.webp" alt="" width="30%">
-                <h3>Nombre del producto</h3>
-                <small>Descripcion del producto</small>
-                <p>Precio del producto</p>
-                <button>Agregar al carrito</button>
+                <img class="imagen-producto" src="./assets/img/creatina-1.webp" alt="" width="30%">
+                <h3 class="nombre-producto">Nombre del producto</h3>
+                <p>Descripcion del producto</p>
+                <small>Precio del producto</small>
+                <button class="agregar-carrito">Agregar al carrito</button>
             </div>
             <div class="productos-items">
-                <img src="./assets/img/bcaa-1.webp" alt="" width="30%">
-                <h3>Nombre del producto</h3>
-                <small>Descripcion del producto</small>
-                <p>Precio del producto</p>
-                <button>Agregar al carrito</button>
+                <img class="imagen-producto" src="./assets/img/bcaa-1.webp" alt="" width="30%">
+                <h3 class="nombre-producto">Nombre del producto</h3>
+                <p>Descripcion del producto</p>
+                <small>Precio del producto</small>
+                <button class="agregar-carrito">Agregar al carrito</button>
             </div>
-        </section>  
+        </section>
     </aside>
     <footer id="contactos">
         <div class="info-contacto">
@@ -99,7 +139,7 @@
                 <li><a href="https://www.facebook.com/powergym">Facebook</a></li>
                 <li><a href="https://www.instagram.com/powergym">Instagram</a></li>
                 <li><a href="https://www.twitter.com/powergym">Twitter</a></li>
-            </ul>  
+            </ul>
         </div>
     </footer>
 
@@ -107,4 +147,5 @@
     <script src="./js/cart.js"></script>
     <script src="./js/products.js"></script>
 </body>
+
 </html>
