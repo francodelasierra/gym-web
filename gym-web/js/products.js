@@ -1,3 +1,4 @@
+
 //Array de productos con su detalle para Card ..//
 export const PRODUCTS = [
     {
