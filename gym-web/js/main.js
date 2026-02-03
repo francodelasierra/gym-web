@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // =========================
 // IMPORTS
 // =========================
@@ -48,3 +49,7 @@ function renderProducts() {
 renderProducts();
 renderCart();
 setupPlanModal();
+=======
+
+
+>>>>>>> 1278ad4 (Agrego render del carrito)
