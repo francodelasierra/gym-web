@@ -4,6 +4,8 @@
 import { PRODUCTS } from "./products.js";
 import { addToCart } from "./cart.js";
 import { renderCart } from "./cart-render.js";
+import { setupPlanModal } from "./plans.js";
+
 
 // =========================
 // DOM
@@ -44,5 +46,5 @@ function renderProducts() {
 // INIT
 // =========================
 renderProducts();
-renderCart(); // 👈 CLAVE: carga el carrito al refrescar
-
+renderCart();
+setupPlanModal();
