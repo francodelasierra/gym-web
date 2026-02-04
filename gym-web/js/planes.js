@@ -9,7 +9,9 @@ export function setupPlanModal() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const plan = button.dataset.plan || "Plan";
-      modalTitle.textContent = `Plan ${plan} contratado`;
+      modalTitle.textContent = `Plan ${plan} contratado,
+                                Gracias por su compra.
+                                Se le han enviado las instrucciones de pago a su correo.`;
       modal.classList.add("show");
 
       button.disabled = true;

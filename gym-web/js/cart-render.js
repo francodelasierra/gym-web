@@ -9,7 +9,10 @@ export function renderCart() {
   cartContainer.innerHTML = "";
 
   if (cart.length === 0) {
-    cartContainer.innerHTML = "<p>El carrito está vacío</p>";
+    cartContainer.innerHTML = `
+  <p class="cart-empty">🛒 El carrito está vacío</p>
+`;
+
     return;
   }
 
@@ -48,4 +51,49 @@ totalDiv.innerHTML = `
 
 
   cartContainer.appendChild(totalDiv);
+const checkoutBtn = totalDiv.querySelector("#checkout");
+
+checkoutBtn.addEventListener("click", () => {
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modal-title");
+
+  if (!modal || !modalTitle) return;
+
+  modalTitle.innerHTML = `
+    Gracias por su compra <br><br>
+    Le enviaremos su comprobante de pago al correo.
+  `;
+
+  modal.classList.add("show");
+
+  localStorage.removeItem("cart");
+  renderCart();
+
+
+const checkoutBtn = document.getElementById("checkout");
+
+checkoutBtn.addEventListener("click", () => {
+  cartContainer.innerHTML = `
+    <div class="cart-empty">
+      ✅ Gracias por su compra <br>
+      Le enviaremos su comprobante de pago al correo.
+    </div>
+  `;
+
+  localStorage.removeItem("cart");
+});
+
+
+
+
+
+
+});
+
+
+
+
 }
+
+
+

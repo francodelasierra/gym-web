@@ -136,16 +136,7 @@ export const PRODUCTS = [
         image: "./assets/img/bcaa-3.webp",
         category: "BCAA"
     },
-    {
-        id: "bcaa-004",
-        name: "Bcaa Universal",
-        description: "BCAA Universal es un suplemento de aminoácidos de cadena ramificada (Leucina, Isoleucina y Valina) formulado para mejorar la recuperación muscular, reducir la fatiga y proteger la masa muscular durante entrenamientos intensos. Ideal para deportistas que buscan rendimiento, fuerza y una recuperación más rápida.",
-        price: 24000,
-        available: true,
-        image: "./assets/img/bcaa-4.webp",
-        category: "BCAA"
-    },
-
+    
 
 
 
