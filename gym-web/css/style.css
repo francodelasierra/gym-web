@@ -55,30 +55,37 @@ small {
 ========================= */
 .nav-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-image: url("../assets/img/Gym.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 75vh;
+  min-height: 250px; /* antes era 75vh, ahora un valor intermedio */
+  padding: 0 30px;
   color: #fff;
-  padding: 0 30px 30px;
 }
+
+.logo {
+  width: 150px; /* ajustable */
+  height: auto;
+}
+
+
 
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* alinea links a la derecha */
   align-items: center;
   list-style: none;
-  padding: 20px 0;
-  margin: 0;
   gap: 40px;
-  background-color: #030303;
-  margin-top: 35px;
+  margin: 0;
+  padding: 0;
+  background: transparent; /* eliminamos fondo oscuro si lo querés sobre la imagen */
 }
+
 
 /* LINKS NAVBAR ESTILO REDES */
 .nav-list li a {
