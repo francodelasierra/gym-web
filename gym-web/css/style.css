@@ -65,7 +65,11 @@ small {
   min-height: 250px; /* antes era 75vh, ahora un valor intermedio */
   padding: 0 30px;
   color: #fff;
+  position: relative;
+  
 }
+
+
 
 .logo {
   width: 150px; /* ajustable */
@@ -86,6 +90,9 @@ small {
   background: transparent; /* eliminamos fondo oscuro si lo querés sobre la imagen */
 }
 
+.nav-list.show {
+  display: flex;
+}
 
 /* LINKS NAVBAR ESTILO REDES */
 .nav-list li a {
@@ -151,6 +158,11 @@ small {
 /* =========================
    BOTONES
 ========================= */
+/* boton hamburguesa*/
+
+
+
+
 .btn-plan,
 .btn-modal,
 .btn-buy,
@@ -424,3 +436,41 @@ footer {
   color: #ccc;
   font-size: 16px;
 }
+
+/* =========================
+   NAV MOBILE
+========================= */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  /* 👉 ESTE ES EL FIX CLAVE */
+  .nav-header.menu-open {
+    padding-bottom: 40px;
+  }
+}
+

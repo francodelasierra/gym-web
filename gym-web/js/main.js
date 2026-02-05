@@ -1,10 +1,24 @@
+// =========================
+// IMPORTS
+// =========================
 import { PRODUCTS } from "./products.js";
 import { addToCart } from "./cart.js";
 import { renderCart } from "./cart-render.js";
 import { setupPlanModal } from "./planes.js";
 
-const productsContainer = document.getElementById("products-container");
 
+// =========================
+// DOM ELEMENTS
+// =========================
+const productsContainer = document.getElementById("products-container");
+const menuToggle = document.getElementById("menuToggle");
+const navList = document.getElementById("navList");
+const header = document.querySelector(".nav-header");
+
+
+// =========================
+// RENDER PRODUCTS
+// =========================
 function renderProducts() {
   if (!productsContainer) return;
 
@@ -22,7 +36,7 @@ function renderProducts() {
       <button class="btn-buy">Comprar</button>
     `;
 
-    const button = card.querySelector("button");
+    const button = card.querySelector(".btn-buy");
     button.addEventListener("click", () => {
       addToCart(product);
       renderCart();
@@ -32,7 +46,28 @@ function renderProducts() {
   });
 }
 
-renderProducts();
-renderCart();
-setupPlanModal();
+
+// =========================
+// NAVBAR MOBILE
+// =========================
+function setupMobileMenu() {
+  if (!menuToggle || !navList || !header) return;
+
+  menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("show");
+    header.classList.toggle("menu-open");
+  });
+}
+
+
+// =========================
+// INIT
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+  renderCart();
+  setupPlanModal();
+  setupMobileMenu();
+});
+
 
