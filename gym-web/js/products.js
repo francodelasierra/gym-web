@@ -25,7 +25,7 @@ export const PRODUCTS = [
         description: "Proteína de suero Whey Advanced formulada para optimizar el desarrollo muscular, la fuerza y la recuperación. Su combinación de proteínas de alta calidad y rápida absorción la hace ideal para consumir después del entrenamiento o como complemento diario en dietas enfocadas en el rendimiento deportivo.",
         price: 40000,
         available: true,
-        image: "./assets/img/proteina-2.webp",
+        image: "./assets/img/proteina-3.webp",
         category: "proteina"
     },
     {
@@ -34,7 +34,7 @@ export const PRODUCTS = [
         description: "Proteína de suero Ultra Tech diseñada para potenciar el crecimiento muscular, la fuerza y la recuperación después del entrenamiento. Su fórmula de rápida absorción aporta proteínas de alta calidad, ideal para quienes entrenan de forma intensa y buscan mejorar su rendimiento y composición corporal.",
         price: 39000,
         available: true,
-        image: "./assets/img/proteina-2.webp",
+        image: "./assets/img/proteina-4.webp",
         category: "proteina"
     },
     {
