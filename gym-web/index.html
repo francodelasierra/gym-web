@@ -2,20 +2,21 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Power Gym</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Gym</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
 
-  <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+
  <header class="nav-header">
   <img src="./assets/img/logo-powergym.png" alt="Power Gym" class="logo" />
 
@@ -29,9 +30,7 @@
   </ul>
 </header>
 
-
-
-  <main>
+ <main>
     <div class="presentacion">
       <h2 class="titulos">Bienvenidos a Power Gym</h2>
       <p class="text">
@@ -107,9 +106,6 @@
       <section id="products-container" class="products-container"></section>
     </section>
 
-
-
-
     <section id="carrito" class="cart-section">
       <h2 class="cart-title">
         <span class="cart-icon">🛒</span>
@@ -134,12 +130,135 @@
           <li><a href="https://www.facebook.com/powergym" target="_blank" rel="noreferrer">Facebook</a></li>
           <li><a href="https://www.instagram.com/powergym" target="_blank" rel="noreferrer">Instagram</a></li>
           <li><a href="https://www.twitter.com/powergym" target="_blank" rel="noreferrer">Twitter</a></li>
+  
         </ul>
-      </div>
-    </footer>
-  </aside>
+    </header>
+ <main>
+        <div class="presentacion">
+            <div>
+                <img src="./assets/img/Black Gym Aesthetic.jpg" alt="">
+            </div>
+            <div class="text-presentacion">
+                <h2 class="titulos">BIENVENIDOS A POWER GYM</h2>
+                <p>
+                    En Power Gym creemos que el entrenamiento es mucho más que una rutina: es una filosofía de vida.
+                    Nuestro gimnasio nació con una visión clara: crear un espacio donde la disciplina, la constancia y
+                    la superación personal se transformen en resultados reales y sostenibles. Desde nuestros inicios,
+                    trabajamos con un solo objetivo estratégico: potenciar el rendimiento físico y mental de cada uno de
+                    nuestros socios.
 
-  <script type="module" src="./js/main.js"></script>
+                    A lo largo del tiempo, Power Gym se consolidó como un referente en entrenamiento integral,
+                    combinando equipamiento de alto nivel, un entorno profesional y una comunidad enfocada en el
+                    progreso continuo. Cada decisión que tomamos está orientada a maximizar la experiencia del cliente y
+                    elevar los estándares del sector fitness.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="planes-header">
+            <h2 class="titulos" id="planes">PLANES</h2>
+            <span>Planes pensados para tu crecimiento</span>
+        </div>
+
+        <p class="planes-text">
+            En Power Gym diseñamos planes mensuales flexibles y competitivos...
+        </p>
+
+        <section class="cards-container" id="plans-container">
+            <div class="plan">
+                <h3>Básico</h3>
+                <p>
+                    Acceso al gimnasio 3 días por semana <br />
+                    + <br />
+                    rutina elaborada por nuestros profesionales
+                </p>
+                <small>$35.000</small>
+                <button class="btn-plan" data-plan="Básico">Contratar</button>
+            </div>
+
+            <div class="plan">
+                <h3>Premium</h3>
+                <p>
+                    Acceso al gimnasio 4 días por semana <br />
+                    + <br />
+                    rutina elaborada por nuestros profesionales <br />
+                    + <br />
+                    clases grupales
+                </p>
+                <small>$40.000</small>
+                <button class="btn-plan" data-plan="Premium">Contratar</button>
+            </div>
+
+            <div class="plan">
+                <h3>Deluxe</h3>
+                <p>
+                    Todo incluido con acceso libre al gimnasio<br />
+                    + <br />
+                    entrenador personal <br />
+                    + <br />
+                    descuentos en suplementos
+                </p>
+                <small>$45.000</small>
+                <button class="btn-plan" data-plan="Deluxe">Contratar</button>
+            </div>
+        </section>
+
+        <!-- MODAL -->
+        <div id="modal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <h3 id="modal-title"></h3>
+                <button id="closeModal" class="btn-modal">Aceptar</button>
+            </div>
+        </div>
+
+        <section id="productos">
+            <div class="productos-header">
+                <h2>PRODUCTOS</h2>
+                <span>Suplementación que potencia resultados</span>
+            </div>
+
+            <p class="productos-text">
+                Entendemos que el entrenamiento eficiente va de la mano de una nutrición inteligente...
+            </p>
+
+            <section id="products-container" class="products-container"></section>
+        </section>
+
+
+
+
+        <section id="carrito" class="cart-section">
+            <h2 class="cart-title">
+                <span class="cart-icon">🛒</span>
+                Carrito
+            </h2>
+
+            <section id="cart-container" class="cart-container"></section>
+        </section>
+
+        <footer id="contactos">
+            <div class="info-contacto">
+                <p>Email: info@powergym.com</p>
+                <p>Teléfono: 1234567890</p>
+            </div>
+            <div class="info-direccion">
+                <p>Dirección: Calle 123, Ciudad, País</p>
+                <p>Horarios: Lunes a Viernes, 8:00 AM - 5:00 PM</p>
+            </div>
+            <div class="info-redes">
+                <p>Redes sociales</p>
+                <ul class="list-redes">
+                    <li><a href="https://www.facebook.com/powergym" target="_blank" rel="noreferrer">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/powergym" target="_blank" rel="noreferrer">Instagram</a></li>
+                    <li><a href="https://www.twitter.com/powergym" target="_blank" rel="noreferrer">Twitter</a></li>
+                </ul>
+            </div>
+        </footer>
+    </aside>
+
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

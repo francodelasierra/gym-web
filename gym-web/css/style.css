@@ -119,7 +119,25 @@ small {
    PRESENTACION
 ========================= */
 .presentacion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin: 20px;
+
+}
+
+.presentacion img {
+    width: 200%;
+    max-height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.presentacion p {
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    padding-left: 200px;
 }
 
 /* =========================
@@ -149,8 +167,13 @@ small {
   padding: 16px;
 }
 
+.plan h3 {
+    font-family: "Saira Stencil One", sans-serif;
+    font-size: 30px;
+    color: #111;
+    text-align: center;
+}
 .plan p,
-.plan h3,
 .plan small {
   color: #111;
 }
@@ -395,6 +418,44 @@ footer {
 .info-direccion:hover {
   transform: translateY(-6px);
 }
+/* =========================
+   PLANES – ESTILO FUERTE
+========================= */
+
+.planes-header {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 35px;
+    background: #0e0e0e;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+.planes-header h2 {
+    font-family: "Saira Stencil One", sans-serif;
+    font-size: 42px;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+.planes-header span {
+    display: block;
+    margin-top: 12px;
+    font-family: "Tomorrow", sans-serif;
+    font-size: 18px;
+    color: #9e9e9e;
+}
+
+.planes-text {
+    max-width: 900px;
+    margin: 20px auto 40px;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+}
+
 /* =========================
    PRODUCTOS – ESTILO FUERTE
 ========================= */
