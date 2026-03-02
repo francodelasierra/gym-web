@@ -2,7 +2,8 @@ const CART_KEY = "cart";
 
 function readCart() {
   try {
-    return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    const data = JSON.parse(localStorage.getItem(CART_KEY));
+    return Array.isArray(data) ? data : [];
   } catch {
     return [];
   }
@@ -12,16 +13,41 @@ function saveCart(cart) {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
+function toValidPrice(value) {
+  const n = Number(value);
+  return Number.isFinite(n) && n >= 0 ? n : 0;
+}
+
+function toValidQty(value) {
+  const n = Number(value);
+  return Number.isFinite(n) && n >= 1 ? Math.floor(n) : 1;
+}
+
 export function getCart() {
   return readCart();
 }
 
 export function addToCart(product) {
+  if (!product || !product.id) return;
+  if (product.available === false) return;
+
   const cart = readCart();
   const item = cart.find((p) => p.id === product.id);
 
-  if (item) item.quantity += 1;
-  else cart.push({ ...product, quantity: 1 });
+  if (item) {
+    item.quantity = toValidQty(item.quantity + 1);
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      image: product.image,
+      category: product.category,
+      price: toValidPrice(product.price),
+      available: product.available !== false,
+      quantity: 1,
+    });
+  }
 
   saveCart(cart);
 }
@@ -36,12 +62,22 @@ export function updateQuantity(id, quantity) {
   const item = cart.find((p) => p.id === id);
   if (!item) return;
 
-  const q = Number(quantity);
-  item.quantity = Number.isFinite(q) && q >= 1 ? q : 1;
-
+  item.quantity = toValidQty(quantity);
   saveCart(cart);
 }
 
+export function clearCart() {
+  saveCart([]);
+}
+
+export function getCount() {
+  return readCart().reduce((acc, item) => acc + toValidQty(item.quantity), 0);
+}
+
 export function getTotal() {
-  return readCart().reduce((acc, item) => acc + item.price * item.quantity, 0);
+  return readCart().reduce((acc, item) => {
+    const price = toValidPrice(item.price);
+    const qty = toValidQty(item.quantity);
+    return acc + price * qty;
+  }, 0);
 }

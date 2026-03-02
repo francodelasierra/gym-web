@@ -1,15 +1,11 @@
-/* =========================
-   RESET & BASE
-========================= */
+/* RESET & BASE*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -17,9 +13,8 @@ body {
   background-color: #333;
 }
 
-/* =========================
-   TIPOGRAFIAS GENERALES
-========================= */
+/* TIPOGRAFÍAS GENERALES*/
+
 .titulos {
   font-family: "Saira Stencil One", sans-serif;
   font-weight: 400;
@@ -27,10 +22,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 48px;   
+  font-size: 48px;
   letter-spacing: 4px;
 }
-
 
 .subtitulos {
   font-family: "Saira Stencil One", sans-serif;
@@ -39,37 +33,42 @@ body {
   margin: 20px;
 }
 
-.text,
+
 p {
   font-family: "Tomorrow", sans-serif;
   font-weight: 600;
   color: #fff;
-  margin: 20px;
+  margin: 0;
+  line-height: 1.6;
 }
+
+
+.text { margin: 20px; }
 
 small {
   font-family: "Tomorrow", sans-serif;
   font-size: 25px;
 }
 
-/* =========================
-   HEADER & NAVBAR
-========================= */
+/*HEADER & NAVBAR*/
+
 .nav-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   background-image: url("../assets/img/gym.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 250px; /* antes era 75vh, ahora un valor intermedio */
+
+  min-height: 250px;
   padding: 0 30px;
   color: #fff;
   position: relative;
-  
 }
+
 .nav-header::before {
   content: "";
   position: absolute;
@@ -83,49 +82,39 @@ small {
   z-index: 1;
 }
 
-
-
 .logo {
-  width: 150px; /* ajustable */
+  width: 150px;
   height: auto;
 }
 
-
-
-
 .nav-list {
   display: flex;
-  justify-content: flex-end; /* alinea links a la derecha */
+  justify-content: flex-end;
   align-items: center;
   list-style: none;
   gap: 40px;
   margin: 0;
   padding: 0;
-  background: transparent; /* eliminamos fondo oscuro si lo querés sobre la imagen */
+  background: transparent;
 }
 
-.nav-list.show {
-  display: flex;
-}
+.nav-list.show { display: flex; }
 
-/* =========================
-   NAVBAR LINKS – FIX IMAGEN
-========================= */
+/* LINKS NAVBAR */
 .nav-list li a {
   text-decoration: none;
   font-family: "Tomorrow", sans-serif;
   font-weight: 700;
   font-size: 18px;
 
-  color: #fff; /* ✔ blanco para contraste */
-  
+  color: #fff;
   padding: 12px 24px;
   border-radius: 30px;
 
-  background: rgba(0, 0, 0, 0.55); /* ✔ fondo oscuro translúcido */
+  background: rgba(0, 0, 0, 0.55);
   border: 2px solid rgba(25, 135, 84, 0.8);
 
-  backdrop-filter: blur(4px); /* efecto vidrio */
+  backdrop-filter: blur(4px);
   transition: all 0.3s ease;
   display: inline-block;
 }
@@ -137,10 +126,8 @@ small {
   box-shadow: 0 10px 25px rgba(25, 135, 84, 0.6);
 }
 
+/* PRESENTACIÓN*/
 
-/* =========================
-   PRESENTACION
-========================= */
 .presentacion {
   display: flex;
   align-items: center;
@@ -151,11 +138,8 @@ small {
   padding: 60px;
 
   background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.75),
-      rgba(0, 0, 0, 0.75)
-    ),
-    url("/gym-web/assets/img/suplementacion.jpg");
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../assets/img/suplementacion.jpg"); /* FIX: ruta correcta */
 
   background-size: cover;
   background-position: center;
@@ -165,16 +149,12 @@ small {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
 }
 
-
-
-/* =========================
-   PLANES
-========================= */
-
-
-#planes {
-  margin-top: 80px;
+.text-presentacion {
+  max-width: 900px;
 }
+
+/* PLANES*/
+#planes { margin-top: 80px; }
 
 .planes-header {
   max-width: 900px;
@@ -183,7 +163,7 @@ small {
   background: #0e0e0e;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 .planes-header h2 {
@@ -202,10 +182,6 @@ small {
   color: #9e9e9e;
 }
 
-
-
-
-
 .cards-container {
   display: flex;
   justify-content: space-between;
@@ -222,34 +198,35 @@ small {
   align-items: center;
   flex-direction: column;
   text-align: center;
+
   width: 300px;
   border-radius: 12px;
   overflow: hidden;
+
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   background-color: #fff;
   padding: 16px;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .plan h3 {
-    font-family: "Saira Stencil One", sans-serif;
-    font-size: 30px;
-    color: #111;
-    text-align: center;
-}
-.plan p,
-.plan small {
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: 30px;
   color: #111;
+  text-align: center;
 }
+
+
+.plan p { color: #111; margin: 12px 0; }
+.plan small { color: #111; }
+
 .plan:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
-/* =========================
-   BOTONES
-========================= */
 
-/* Base común */
+/* BOTONES*/
 .btn-plan,
 .btn-modal,
 .btn-buy,
@@ -269,26 +246,22 @@ small {
   transition: 0.3s;
 }
 
-/* Botones de PLANES → tipografía de marca */
 .btn-plan {
   font-family: "Saira Stencil One", sans-serif;
   letter-spacing: 1px;
 }
 
-/* Botones de ACCIÓN (modal / carrito) → tipografía de notificación */
 .btn-modal,
 .btn-buy,
 .btn-finish {
   font-family: "Tomorrow", sans-serif;
 }
 
-/* Centrado del botón del modal */
 .btn-modal {
   margin: 20px auto 0;
   display: block;
 }
 
-/* Hover general */
 .btn-plan:hover,
 .btn-modal:hover,
 .btn-buy:hover,
@@ -297,261 +270,39 @@ small {
   color: #fff;
 }
 
+/* MODAL*/
 
-/* =========================
-   MODAL
-========================= */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1400; 
 }
 
-.modal.show {
-  display: flex;
-}
-
+.modal.show { display: flex; }
 
 .modal-content {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   width: 320px;
-}
-
-/* =========================
-   PRODUCTOS
-========================= */
-.products-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; 
-  padding: 20px;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-
-.product-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   text-align: center;
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
-  padding: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
 }
 
-.product-card p,
-.product-card h3,
-.product-card strong {
+#modal-title {
+  white-space: pre-line;
+  font-family: "Tomorrow", sans-serif;
   color: #111;
-}
-
-.product-img {
-  width: 75%;
-  height: 200px;
-  object-fit: cover;
-  transition: 0.3s;
-  margin: 20px 0;
-}
-
-.product-img:hover {
-  transform: scale(1.05);
-}
-
-/* =========================
-   CARRITO
-========================= */
-.cart-container {
-  margin: 30px auto 60px;
-  padding: 24px;
-  max-width: 900px;
-  background: #111;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.cart-item {
-  display: grid;
-  grid-template-columns: 2fr 1fr 80px auto;
-  align-items: center;
-  gap: 12px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
-}
-
-.cart-item h4,
-.cart-item p {
   margin: 0;
-  color: #111;
+  line-height: 1.4;
 }
 
-.cart-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px;
-  margin-top: 10px;
-}
-
-/* =========================
-   TITULO CARRITO
-========================= */
-.cart-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  font-family: "Saira Stencil One", sans-serif;
-  font-size: 32px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.cart-icon {
-  font-size: 36px;
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-/* =========================
-   CARRITO VACIO
-========================= */
-.cart-empty {
-  text-align: center;
-  color: #bbb;
-  padding: 20px;
-  animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================
-   REDES
-========================= */
-.info-redes {
-  background: #111;
-  padding: 40px 20px;
-  text-align: center;
-  border-top: 2px solid #198754;
-  animation: fadeUp 0.8s ease-in;
-}
-
-.list-redes {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-}
-
-.list-redes li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 14px 26px;
-  border-radius: 30px;
-  border: 2px solid #198754;
-  transition: 0.3s;
-}
-
-.list-redes li a:hover {
-  background: #198754;
-  box-shadow: 0 8px 20px rgba(25, 135, 84, 0.5);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #111;
-  padding: 50px 20px;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.info-contacto,
-.info-direccion {
-  background: #1a1a1a;
-  padding: 30px 25px;
-  border-radius: 18px;
-  max-width: 320px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s;
-}
-
-.info-contacto:hover,
-.info-direccion:hover {
-  transform: translateY(-6px);
-}
-/* =========================
-   PLANES – ESTILO FUERTE
-========================= */
-
-.planes-header {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    padding: 35px;
-    background: #0e0e0e;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
-}
-
-.planes-header h2 {
-    font-family: "Saira Stencil One", sans-serif;
-    font-size: 42px;
-    color: #fff;
-    margin: 0;
-    letter-spacing: 4px;
-}
-
-.planes-header span {
-    display: block;
-    margin-top: 12px;
-    font-family: "Tomorrow", sans-serif;
-    font-size: 18px;
-    color: #9e9e9e;
-}
-
-.planes-text {
-    max-width: 900px;
-    margin: 20px auto 40px;
-    text-align: center;
-    color: #ccc;
-    font-size: 16px;
-}
-
-/* =========================
-   PRODUCTOS – ESTILO FUERTE
-========================= */
-
-#productos {
-  margin-top: 80px;
-}
+/* PRODUCTOS*/
+#productos { margin-top: 80px; }
 
 .productos-header {
   max-width: 900px;
@@ -560,7 +311,7 @@ footer {
   background: #0e0e0e;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 .productos-header h2 {
@@ -585,12 +336,174 @@ footer {
   text-align: center;
   color: #ccc;
   font-size: 16px;
+  padding: 0 12px;
 }
 
-/* =========================
-   NAV MOBILE
-========================= */
+.products-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
+.product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  padding: 16px;
+}
+
+.product-card h3,
+.product-card p,
+.product-card strong { color: #111; }
+
+.product-card p { margin: 12px 0; }
+
+.product-img {
+  width: 75%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.3s;
+  margin: 20px 0;
+}
+
+.product-img:hover { transform: scale(1.05); }
+
+/* CARRITO (RENDER) */
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  align-items: center;
+  gap: 10px;
+
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+
+.cart-item h4,
+.cart-item p {
+  margin: 0;
+  color: #111;
+}
+
+.cart-item input[type="number"] {
+  width: 90px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #198754;
+  font-family: "Tomorrow", sans-serif;
+  outline: none;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+
+  position: sticky;
+  bottom: 0;
+}
+
+.cart-total h3 {
+  color: #111;
+  margin: 0;
+}
+
+.cart-empty {
+  text-align: center;
+  color: #bbb;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER + REDES*/
+.info-redes {
+  background: #111;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #198754;
+  animation: fadeUp 0.8s ease-in;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.list-redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.list-redes li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 30px;
+  border: 2px solid #198754;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.list-redes li a:hover {
+  background: #198754;
+  box-shadow: 0 8px 20px rgba(25, 135, 84, 0.5);
+}
+
+footer {
+  background: #111;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.info-contacto,
+.info-direccion {
+  background: #1a1a1a;
+  padding: 30px 25px;
+  border-radius: 18px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s;
+}
+
+.info-contacto p,
+.info-direccion p { margin: 10px 0; }
+
+.info-contacto:hover,
+.info-direccion:hover { transform: translateY(-6px); }
+
+/* NAV MOBILE*/
 .menu-toggle {
   display: none;
   background: none;
@@ -601,11 +514,125 @@ footer {
   z-index: 1001;
 }
 
-/* Mobile */
+/* CARRITO LATERAL (DRAWER)*/
+.cart-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1200;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 2px solid #198754;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+.cart-badge {
+  min-width: 26px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: #198754;
+  color: #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1100;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, 92vw);
+  height: 100vh;
+  z-index: 1201;
+
+  background: #111;
+  border-left: 2px solid rgba(25, 135, 84, 0.55);
+
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.is-open { transform: translateX(0); }
+
+.cart-drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.cart-drawer__title {
+  font-family: "Saira Stencil One", sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 22px;
+}
+
+.cart-drawer__close {
+  border: 2px solid #198754;
+  background: transparent;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-drawer__body {
+  padding: 16px;
+  overflow: auto;
+  flex: 1;
+}
+
+
+#cart-container {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/*  RESPONSIVE*/
+
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+  .menu-toggle { display: block; }
 
   .nav-list {
     display: none;
@@ -614,13 +641,101 @@ footer {
     margin-top: 30px;
   }
 
-  .nav-list.show {
-    display: flex;
+  .nav-list.show { display: flex; }
+
+  .nav-header.menu-open { padding-bottom: 40px; }
+
+  .products-container,
+  .cards-container {
+    justify-content: center;
+    margin: 30px 10px;
   }
 
-  /* 👉 ESTE ES EL FIX CLAVE */
-  .nav-header.menu-open {
-    padding-bottom: 40px;
+  .titulos {
+    font-size: 34px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .presentacion {
+    margin: 30px 12px;
+    padding: 28px;
+  }
+
+  .cart-drawer { width: 95vw; }
+
+  .cart-total {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
 }
 
+
+
+.cart-item{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:12px;
+  align-items:center;
+
+  background:#fff;
+  border-radius:12px;
+  padding:14px;
+  margin-bottom:12px;
+}
+
+.cart-thumb{
+  width:64px;
+  height:64px;
+  border-radius:12px;
+  object-fit:cover;
+  border:2px solid rgba(25,135,84,.35);
+}
+
+.cart-info h4{
+  margin:0;
+  color:#111;
+  font-family:"Tomorrow",sans-serif;
+  font-weight:800;
+  font-size:14px;
+  line-height:1.2;
+}
+
+.cart-info p{
+  margin:6px 0 0;
+  color:#111;
+  font-family:"Tomorrow",sans-serif;
+  font-weight:700;
+}
+
+.cart-actions{
+  grid-column:1 / -1;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.cart-qty{
+  width:90px;
+  padding:10px;
+  border-radius:10px;
+  border:2px solid #198754;
+  font-family:"Tomorrow",sans-serif;
+  outline:none;
+}
+
+.cart-remove{
+  margin:0;            /* clave: evita que se salga (tu botón base tiene margin:20px) */
+  padding:12px 14px;
+  white-space:nowrap;
+}
+
+@media (max-width:768px){
+  .cart-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .cart-qty{ width:100%; }
+}

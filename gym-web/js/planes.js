@@ -6,28 +6,45 @@ export function setupPlanModal() {
 
   if (!modal || !modalTitle || !closeModal || buttons.length === 0) return;
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const plan = button.dataset.plan || "Plan";
-      modalTitle.textContent = `Plan ${plan} contratado,
-                                Gracias por su compra.
-                                Se le han enviado las instrucciones de pago a su correo.`;
-      modal.classList.add("show");
-
-      button.disabled = true;
-      button.textContent = "Procesando...";
-    });
-  });
-
-  closeModal.addEventListener("click", () => {
-    modal.classList.remove("show");
+  const resetButtons = () => {
     buttons.forEach((btn) => {
       btn.disabled = false;
       btn.textContent = "Contratar";
     });
+  };
+
+  const openModal = (plan) => {
+
+    modalTitle.textContent =
+      `Plan ${plan} contratado.\n` +
+      `Gracias por su compra.\n` +
+      `Se le han enviado las instrucciones de pago a su correo.`;
+
+    modal.classList.add("show");
+
+   
+    buttons.forEach((btn) => (btn.disabled = true));
+  };
+
+  const close = () => {
+    modal.classList.remove("show");
+    resetButtons();
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const plan = button.dataset.plan || "Plan";
+
+      // feedback en el botón clickeado
+      button.textContent = "Procesando...";
+
+      openModal(plan);
+    });
   });
 
+  closeModal.addEventListener("click", close);
+
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.classList.remove("show");
+    if (e.target === modal) close(); 
   });
 }

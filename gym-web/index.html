@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
 
   <!-- CSS -->
@@ -23,40 +24,35 @@
   <header class="nav-header">
     <img src="./assets/img/logo-powergym.png" alt="Power Gym" class="logo" />
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
 
     <ul class="nav-list" id="navList">
       <li><a href="#planes">Planes</a></li>
       <li><a href="#productos">Productos</a></li>
-      <li><a href="#carrito">Carrito</a></li>
       <li><a href="#contactos">Contactos</a></li>
     </ul>
   </header>
 
-  <!-- MAIN -->
+  <!-- MAIN / PRESENTACIÓN -->
   <main>
-    <div class="presentacion">
+    <section class="presentacion">
       <div class="text-presentacion">
         <h2 class="titulos">BIENVENIDOS A POWER GYM</h2>
-        <div class="presentacion">
-         
-          <p>
-            En Power Gym creemos que el entrenamiento es mucho más que una rutina: es una filosofía de vida.
-            Nuestro gimnasio nació con una visión clara: crear un espacio donde la disciplina, la constancia y
-            la superación personal se transformen en resultados reales y sostenibles.
-            <br /><br />
-            A lo largo del tiempo, Power Gym se consolidó como un referente en entrenamiento integral,
-            combinando equipamiento de alto nivel, un entorno profesional y una comunidad enfocada en el
-            progreso continuo.
-          </p>
-        </div>
+
+        <p>
+          En Power Gym creemos que el entrenamiento es mucho más que una rutina: es una filosofía de vida.
+          Nuestro gimnasio nació con una visión clara: crear un espacio donde la disciplina, la constancia y
+          la superación personal se transformen en resultados reales y sostenibles.
+          <br /><br />
+          A lo largo del tiempo, Power Gym se consolidó como un referente en entrenamiento integral,
+          combinando equipamiento de alto nivel, un entorno profesional y una comunidad enfocada en el
+          progreso continuo.
+        </p>
       </div>
-  </main>
+    </section>
 
-  <!-- PLANES -->
-  <aside>
+    <!-- PLANES -->
     <section id="planes">
-
       <div class="planes-header">
         <h2>PLANES</h2>
         <span>Planes mensuales pensados para tu crecimiento</span>
@@ -100,9 +96,22 @@
           <button class="btn-plan" data-plan="Deluxe">Contratar</button>
         </div>
       </section>
-
     </section>
-  </aside>
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+      <div class="productos-header">
+        <h2>PRODUCTOS</h2>
+        <span>Suplementación que potencia resultados</span>
+      </div>
+
+      <p class="productos-text">
+        Entendemos que el entrenamiento eficiente va de la mano de una nutrición inteligente.
+      </p>
+
+      <section id="products-container" class="products-container"></section>
+    </section>
+  </main>
 
   <!-- MODAL -->
   <div id="modal" class="modal" aria-hidden="true">
@@ -111,31 +120,6 @@
       <button id="closeModal" class="btn-modal">Aceptar</button>
     </div>
   </div>
-
-  <!-- PRODUCTOS -->
-  <section id="productos">
-    <div class="productos-header">
-      <h2>PRODUCTOS</h2>
-      <span>Suplementación que potencia resultados</span>
-    </div>
-
-    <p class="productos-text">
-      Entendemos que el entrenamiento eficiente va de la mano de una nutrición inteligente.
-    </p>
-
-    <section id="products-container" class="products-container"></section>
-  </section>
-
-  <!-- CARRITO -->
-  <section id="carrito" class="cart-section">
-    <h2 class="cart-title">
-      <span class="cart-icon">🛒</span>
-      Carrito
-    </h2>
-
-    <section id="cart-container" class="cart-container"></section>
-  </section>
-  </aside>
 
   <!-- FOOTER -->
   <footer id="contactos">
@@ -158,6 +142,25 @@
       </ul>
     </div>
   </footer>
+
+  <!-- BOTÓN FLOTANTE CARRITO -->
+  <button id="cartFab" class="cart-fab" aria-label="Abrir carrito" aria-controls="cartDrawer"
+    aria-expanded="false">
+    🛒 <span id="cartBadge" class="cart-badge">0</span>
+  </button>
+
+  <!-- DRAWER (CARRITO LATERAL) -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h3 class="cart-drawer__title">Carrito</h3>
+      <button id="cartClose" class="cart-drawer__close" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div id="cart-container" class="cart-drawer__body"></div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="cartOverlay" class="cart-overlay" hidden></div>
 
   <!-- JS -->
   <script type="module" src="./js/main.js"></script>
